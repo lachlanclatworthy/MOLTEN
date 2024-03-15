@@ -1,6 +1,16 @@
 # Makefile -- MOLTEN
 
-molten:
+all: build/molten.exe
+
+build/molten.exe: build src/*.cpp src/*.c src/*.h
 	clang -o build/molten.exe --pedantic src/*.cpp src/*.c
 	# TODO -- Check the build succeeded
-	build/molten.exe
+
+build:
+	mkdir -p build
+
+clean:
+	rm -r ./build/*
+
+run: all
+	./build/molten.exe
