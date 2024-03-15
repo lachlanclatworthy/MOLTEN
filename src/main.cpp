@@ -1,4 +1,5 @@
 #include "enemy.h"
+#include "forgot.h"
 #include <iostream>
 
 void runEnemy() {
@@ -10,9 +11,14 @@ void runEnemy() {
 	(void)rollCall(enemies, 1);
 }
 
+void runForget() {
+	while(forgetMeNot());
+}
+
 int main() {
 	std::cout << "------MOLTEN------" << std::endl;
-	runEnemy();
+	// TODO -- Add some interaction here, some zest
+	runForget();
 	std::cout << "----END MOLTEN----" << std::endl;
 
 	return 0;
