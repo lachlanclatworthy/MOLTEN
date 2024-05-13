@@ -1,8 +1,8 @@
 // test.cpp
 
-#include <iostream>
+#include <gtest/gtest.h>
 
-int main() {
-    std::cout << "For the purpose of testing" << std::endl;
-    return 0;
+TEST(MoltenTest, ClassicAssertions) {
+    EXPECT_STRNE("molten", "gather");
+    EXPECT_STRNE(22, 2*11);
 }
