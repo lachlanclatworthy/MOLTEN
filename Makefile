@@ -3,7 +3,7 @@
 all: build/molten.exe
 
 build/molten.exe: build src/*.cpp src/*.c src/*.h
-	clang -o build/molten.exe --pedantic src/*.cpp src/*.c
+	g++ -o build/molten.exe --pedantic src/*.cpp src/*.c
 	# TODO -- Check the build succeeded
 
 build:

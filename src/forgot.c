@@ -27,7 +27,7 @@ bool forgetMeNot(void) {
 	if (!beenHereBefore) {
 		srand(SEED);
 
-		forgot = malloc(toCopy*sizeof(char));
+		forgot = (char *)malloc(toCopy*sizeof(char));
 
 		// There's better ways to do this...
 		for (int k = 0; k < toCopy; k++) {
@@ -35,7 +35,7 @@ bool forgetMeNot(void) {
 		}
 
 		// This was a terrible decision
-		order = malloc(toNot*sizeof(int));
+		order = (int *)malloc(toNot*sizeof(int));
 
 		for (int j = 0; j < toNot; j++) {
 			order[j] = j;

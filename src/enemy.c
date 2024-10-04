@@ -27,7 +27,7 @@ int rollCall(const Enemy *rogues[], size_t galleryLength) {
 
 	// TODO -- Get the fellas some vocal coaching!
 	static const char *opener = "sound off lads!";
-	char *headRoom = malloc(strlen(opener));
+	char *headRoom = (char *)malloc(strlen(opener));
 	puts(amplify(opener, headRoom));
 
 	for (size_t i = 0; i < galleryLength; i++) {
